@@ -22,7 +22,7 @@ export default function TrailerModal({ open, title, videoKey, isLoading, error, 
       maxWidth="md"
       fullWidth
       slotProps={{
-        paper:{
+        paper: {
           sx:{
           bgcolor: '#0b0b0b',
           color: 'white',
@@ -31,6 +31,7 @@ export default function TrailerModal({ open, title, videoKey, isLoading, error, 
           }
         }
       }}
+     
     >
       <DialogTitle
         sx={{
