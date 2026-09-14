@@ -5,6 +5,7 @@ import {ArrowBack, AccessTime, CalendarMonth, Star, PlayArrow} from '@mui/icons-
 import { useMovieDetail, useMovieTrailer } from '../hooks/useMovies'
 import TrailerModal from '../components/TrailerModal'
 
+// detail page for movie
 export default function MovieDetailPage() {
   const { id } = useParams<{ id: string }>()
   const { data: movie, isLoading, error } = useMovieDetail(id)
@@ -16,7 +17,7 @@ export default function MovieDetailPage() {
 
   if (isLoading) {
     return (
-      // <main className="detail-page"><div className="loading-state">Loading movie details...</div></main>
+      
         <Box
         component="main"
         sx={{
@@ -40,7 +41,7 @@ export default function MovieDetailPage() {
 
   if (error || !movie) {
     return (
-      // <main className="detail-page"><div className="error-state">Movie not found.</div></main>
+      
         <Box
         component="main"
         sx={{
@@ -63,28 +64,7 @@ export default function MovieDetailPage() {
   }
 
   return (
-    // <main className="detail-page">
-    //   <Link to="/" className="back-link">← Back to movies</Link>
-
-    //   <section className="detail-hero" style={{ backgroundImage: `linear-gradient(rgba(9,11,20,0.4), rgba(9,11,20,0.8)), url(${movie.backdrop ?? movie.poster})` }}>
-    //     <div className="detail-content">
-    //       <div className="detail-poster-wrap">
-    //         <img src={movie.poster} alt={movie.title} className="detail-poster" />
-    //       </div>
-
-    //       <div className="detail-copy">
-    //         <span className="tag">{movie.genre}</span>
-    //         <h1>{movie.title}</h1>
-    //         <div className="detail-meta">
-    //           <span>{movie.year}</span>
-    //           <span>{movie.duration}</span>
-    //           <span>⭐ {movie.rating.toFixed(1)}</span>
-    //         </div>
-    //         <p>{movie.description}</p>
-    //       </div>
-    //     </div>
-    //   </section>
-    // </main>
+    
      <Box
       component="main"
       sx={{
@@ -194,6 +174,7 @@ export default function MovieDetailPage() {
                 }}
               />
             </Paper>
+
 
             {/* Movie Information */}
             <Box
